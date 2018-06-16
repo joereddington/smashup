@@ -1,0 +1,44 @@
+<html>
+<script>
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+function submit(names)
+{
+  for (var I = 0; I < names.length; I++)
+  {
+       nameList = "<li>" + names[I] + "</li>";
+       document.getElementById("name").innerHTML += nameList;
+  }
+}
+
+// Used like so
+var names = ["Bear Cav", "Plants", "Ghosts", "Humans"];
+//arr = shuffle(arr);
+//console.log(arr);
+</script>
+
+
+<body onload="submit(shuffle(names))">
+<h1> Joka Smash up lists </h1> <br>
+<div id="name"></div>
+
+
+</body>
+</html>
