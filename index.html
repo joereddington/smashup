@@ -21,11 +21,24 @@ function shuffle(array) {
 
 function submit(names)
 {
+gamenumber=1
   for (var I = 0; I < names.length; I++)
   {    
+       
+       if (I%4==0){
+	   if (names.length-I<4){
+
+		document.getElementById("name").innerHTML += "<h2>Unused Factions are</h2>";
+}
+else{
+		document.getElementById("name").innerHTML += "<h2>Game "+gamenumber+"</h2>";
+		gamenumber++}
+	}
+       if (I%4==2){
+		document.getElementById("name").innerHTML += "<h3>Against</h3>";
+	}
        nameList = "<li>" + names[I] + "</li>";
        document.getElementById("name").innerHTML += nameList;
-       
   }
 }
 
