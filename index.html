@@ -21,35 +21,33 @@ function shuffle(array) {
 
 function submit(names)
 {
-gamenumber=1
-  for (var I = 0; I < names.length; I++)
-  {    
-       
-       if (I%4==0){
-	   if (names.length-I<4){
+  gamenumber=1
 
-		document.getElementById("name").innerHTML += "<h2>Unused Factions are</h2>";
-}
-else{
-		document.getElementById("name").innerHTML += "<h2>Game "+gamenumber+"</h2>";
-		gamenumber++}
-	}
-       if (I%4==2){
-		document.getElementById("name").innerHTML += "<h3>Against</h3>";
-	}
-       nameList = "<li>" + names[I] + "</li>";
-       document.getElementById("name").innerHTML += nameList;
-  }
+    while(names.length>=3){
+      document.getElementById("name").innerHTML += "<h2>Game "+gamenumber+"</h2>";
+      gamenumber++
+        document.getElementById("name").innerHTML += names.pop()+" and "+names.pop()+" against "+names.pop()+" and "+names.pop();
+
+    }
+  document.getElementById("name").innerHTML += "<h2>Unused Factions are</h2>";
+  document.getElementById("name").innerHTML += names;
 }
 
 // Used like so
-var names=["Explorers", "Rock Stars", "Grannies", "Teddy Bears", "Aliens", "Dinosaurs", "Ninjas", "Pirates", "Robots", "Tricksters", "Wizards", "Zombies", "Bear Cavalry", "Ghosts", "Killer Plants", "Steampunks", "Elder Things", "Innsmouth", "Minions of Cthulhu a.k.a. Cthulhu Cultists", "Miskatonic University", "Cyborg Apes", "Kaiju", "Criters","Moon Girls", "Power Troopers", "Shapeshifters", "Super Spies", "Time Travelers", "Giant Ants", "Mad Scientists", "Vampires", "Werewolves", "Fairies", "Kitty Cats", "Mythic Horses", "Princesses", "Dragons", "Mythic Greeks", "Sharks", "Super Heroes", "Tornados", "Astroknights", "Changerbots", "Ignobles", "Star Roamers", "Sheep", "Geeks", "Truckers", "Kung Foo Fighters", "Vigilantes", "Disco Dancers", "Cowboys", "Samuari", "Ancient Egyptions", "Vikings", "Team Nova", "Russian Fairy Tales", "West Africa", "Germany", "Inca Empire", "Polynesians"]
+var old_names=["Explorers", "Rock Stars", "Grannies", "Teddy Bears", "Aliens", "Dinosaurs", "Ninjas", "Pirates", "Robots", "Tricksters", "Wizards", "Zombies", "Bear Cavalry", "Ghosts", "Killer Plants", "Steampunks", "Elder Things", "Innsmouth", "Minions of Cthulhu a.k.a. Cthulhu Cultists", "Miskatonic University", "Cyborg Apes", "Kaiju", "Criters","Moon Girls", "Power Troopers", "Shapeshifters", "Super Spies", "Time Travelers", "Giant Ants", "Mad Scientists", "Vampires", "Werewolves", "Fairies", "Kitty Cats", "Mythic Horses", "Princesses", "Dragons", "Mythic Greeks", "Sharks", "Super Heroes", "Tornados", "Astroknights", "Changerbots", "Ignobles", "Star Roamers", "Sheep", "Geeks", "Truckers", "Kung Foo Fighters", "Vigilantes", "Disco Dancers", "Cowboys", "Samuari", "Ancient Egyptions", "Vikings", "Team Nova", "Russian Fairy Tales", "West Africa", "Germany", "Inca Empire", "Polynesians"]
+
+var marvel= ["Avengers", "Hydra", "Kree", "Masters of Evil", "S.H.I.E.L.D.", "Sinister Six", "Spider-Verse", "Ultimates"]
+
+var internationalIncident=["Luchadors", "Mounties", "Musketeers", "Sumo Wrestlers"]
+
+var names =old_names.concat(marvel, marvel, internationalIncident, internationalIncident);
 
 </script>
 
 
 <body onload="submit(shuffle(names))">
 <h1> Joka Smash up lists </h1> <br>
+<button>Copy</button>
 <div id="name"></div>
 
 
