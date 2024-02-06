@@ -24,9 +24,9 @@ function submit(names)
   gamenumber=1
 
     while(names.length>=3){
-      document.getElementById("name").innerHTML += "<h2>Game "+gamenumber+"</h2>";
+      document.getElementById("name").innerHTML += "<b>Game "+gamenumber+"</b>";
       gamenumber++
-        document.getElementById("name").innerHTML += names.pop()+" and "+names.pop()+" against "+names.pop()+" and "+names.pop();
+        document.getElementById("name").innerHTML += names.pop()+" and "+names.pop()+" against "+names.pop()+" and "+names.pop()+"<br>";
 
     }
   document.getElementById("name").innerHTML += "<h2>Unused Factions are</h2>";
@@ -34,7 +34,7 @@ function submit(names)
 }
 
 // Used like so
-var old_names=["Explorers", "Rock Stars", "Grannies", "Teddy Bears", "Aliens", "Dinosaurs", "Ninjas", "Pirates", "Robots", "Tricksters", "Wizards", "Zombies", "Bear Cavalry", "Ghosts", "Killer Plants", "Steampunks", "Elder Things", "Innsmouth", "Minions of Cthulhu a.k.a. Cthulhu Cultists", "Miskatonic University", "Cyborg Apes", "Kaiju", "Criters","Moon Girls", "Power Troopers", "Shapeshifters", "Super Spies", "Time Travelers", "Giant Ants", "Mad Scientists", "Vampires", "Werewolves", "Fairies", "Kitty Cats", "Mythic Horses", "Princesses", "Dragons", "Mythic Greeks", "Sharks", "Super Heroes", "Tornados", "Astroknights", "Changerbots", "Ignobles", "Star Roamers", "Sheep", "Geeks", "Truckers", "Kung Foo Fighters", "Vigilantes", "Disco Dancers", "Cowboys", "Samuari", "Ancient Egyptions", "Vikings", "Team Nova", "Russian Fairy Tales", "West Africa", "Germany", "Inca Empire", "Polynesians"]
+var old_names=["Explorers", "Rock Stars", "Grannies", "Teddy Bears", "Aliens", "Dinosaurs", "Ninjas", "Pirates", "Robots", "Tricksters", "Wizards", "Zombies", "Bear Cavalry", "Ghosts", "Killer Plants", "Steampunks", "Elder Things", /*"Innsmouth", */"Minions of Cthulhu a.k.a. Cthulhu Cultists", "Miskatonic University", "Cyborg Apes", "Kaiju", "Criters","Moon Girls", "Power Troopers", "Shapeshifters", "Super Spies", "Time Travelers", "Giant Ants", "Mad Scientists", "Vampires", "Werewolves", "Fairies", "Kitty Cats", "Mythic Horses", "Princesses", "Dragons", "Mythic Greeks", "Sharks", "Super Heroes", "Tornados", "Astroknights", "Changerbots", "Ignobles", "Star Roamers", "Sheep", "Geeks", "Truckers", "Kung Foo Fighters", "Vigilantes", "Disco Dancers", "Cowboys", "Samuari", "Ancient Egyptions", "Vikings", "Team Nova", "Russian Fairy Tales", "West Africa", "Germany", "Inca Empire", "Polynesians"]
 
 var marvel= ["Avengers", "Hydra", "Kree", "Masters of Evil", "S.H.I.E.L.D.", "Sinister Six", "Spider-Verse", "Ultimates"]
 
@@ -42,8 +42,9 @@ var internationalIncident=["Luchadors", "Mounties", "Musketeers", "Sumo Wrestler
 
 var disney = ["Aladdin", "Beauty and the Beast", "Big Hero 6", "Frozen", "Mulan", "The Lion King", "The Nightmare Before Christmas", "Wreck-It Ralph"]
 
+var eighties=["Back2Future","Action Heros","Ghostbusters","aliens"]
 
-var names =old_names.concat(marvel, marvel, disney, disney, internationalIncident);
+var names =old_names.concat(eighties, marvel, disney, internationalIncident);
 
 </script>
 
